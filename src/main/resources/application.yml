@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dual_auth_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: abhi@18
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+logging:
+  level:
+    org.springframework.security: INFO
+
+app:
+  jwt:
+    email:
+      secret: bpii18yPMIAEfufqygwAwELEii2Shlfp
+      expiration-seconds: 900
+    mobile:
+      secret: PSsO8iAkBseYt4IeI0EQohDpUIANBXmD
+      expiration-seconds: 900
+    issuer: dual-auth-app
