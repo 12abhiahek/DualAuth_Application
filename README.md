@@ -15,20 +15,34 @@ MySQL credentials used in application.yml:
 - username: root
 - password: your_Password
 
+## Prerequisites
+
+- Java 17
+- Maven
+- MySQL Server running on `localhost`
+- MySQL database: `dual_auth_db`
+- 
 Run Application:
-1. mvn clean package
-2. mvn spring-boot:run
+1. Clone the repository:
+   - git clone <repository_url>
+2. Build the project:
+   - mvn clean package
+3. Run the Spring Boot application:
+   - mvn spring-boot:run
+4. application will start on http://localhost:<port_number>
 
 Tests:
 - mvn test (tests use H2 in-memory)
-API endpoints:
-Email
-- /api/auth/email/register
-- /api/auth/email/login
 
-  Mobile
-- /api/auth/mobile/request-otp
-- /api/auth/mobile/verify-otp
+API endpoints:
+
+Email
+- POST: /api/auth/email/register
+- POST: /api/auth/email/login
+
+Mobile
+- POST: /api/auth/mobile/request-otp
+- POST: /api/auth/mobile/verify-otp
 
 ScreenShort:
 1. Mobile otp request
