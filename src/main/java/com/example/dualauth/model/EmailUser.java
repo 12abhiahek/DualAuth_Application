@@ -25,7 +25,7 @@ public class EmailUser {
     private String passwordHash;
 
     @Column
-    private String roles; // comma-separated roles like ROLE_ADMIN,ROLE_STAFF
+    private String roles; //  ROLE_ADMIN,ROLE_STAFF
 
     @Column
     private boolean enabled = true;

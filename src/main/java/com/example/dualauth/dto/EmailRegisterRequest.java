@@ -8,5 +8,5 @@ import lombok.Setter;
 public class EmailRegisterRequest {
     private String email;
     private String password;
-    private String roles; // optional comma-separated roles
+    private String roles; // optional  roles
 }

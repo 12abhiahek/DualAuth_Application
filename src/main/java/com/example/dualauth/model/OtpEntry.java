@@ -22,7 +22,7 @@ public class OtpEntry {
     private String mobile;
 
     @Column(nullable = false)
-    private String otpHash; // for test you may store plain OTP
+    private String otpHash;
 
     @Column(nullable = false)
     private Instant expiresAt;

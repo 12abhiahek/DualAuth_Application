@@ -111,6 +111,8 @@ public class AuthService {
         return jwtProviderService.generateMobileToken(mu.getMobile(), extra);
     }
 
+
+
     private String generate6DigitOtp() {
         int v = new Random().nextInt(900000) + 100000;
         return String.valueOf(v);

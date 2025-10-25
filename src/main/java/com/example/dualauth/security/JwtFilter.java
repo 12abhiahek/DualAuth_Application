@@ -49,8 +49,18 @@ public class JwtFilter extends OncePerRequestFilter {
                     SecurityContextHolder.getContext().setAuthentication(auth);
                 }
             } catch (Exception ignored) {
+
                 // invalid token -> leave security context empty
+
+
+//                if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+//                    response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+//                    response.getWriter().write("Missing or invalid Authorization header");
+//                    return;
+//                }
+
             }
+
         }
 
         filterChain.doFilter(request, response);

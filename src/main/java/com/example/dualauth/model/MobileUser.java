@@ -21,7 +21,7 @@ public class MobileUser {
     private String name;
 
     @Column(nullable = false, unique = true)
-    private String mobile; // E.164 recommended
+    private String mobile;
 
     private boolean mobileVerified = false;
 
