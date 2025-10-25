@@ -27,6 +27,7 @@ public class SecurityConfig {
             .and()
             .authorizeHttpRequests()
             .requestMatchers("/api/auth/**").permitAll()
+                .requestMatchers("/api/**").permitAll()
             .requestMatchers("/api/email/**").hasAuthority("AUTH_EMAIL")
             .requestMatchers("/api/mobile/**").hasAuthority("AUTH_MOBILE")
             .requestMatchers("/api/shared/**").authenticated()

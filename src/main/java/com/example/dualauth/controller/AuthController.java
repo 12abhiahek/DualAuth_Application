@@ -41,4 +41,5 @@ public class AuthController {
         String token = authService.verifyOtp(req.getMobile(), req.getOtp(), req.getName());
         return ResponseEntity.ok(new AuthResponse(token, "MOBILE"));
     }
+
 }
