@@ -15,13 +15,20 @@ MySQL credentials used in application.yml:
 - username: root
 - password: your_Password
 
-Run (start MySQL via docker-compose if you want):
-1. docker-compose up -d
-2. mvn clean package
-3. mvn spring-boot:run
+Run Application:
+1. mvn clean package
+2. mvn spring-boot:run
 
 Tests:
 - mvn test (tests use H2 in-memory)
+API endpoints:
+Email
+- /api/auth/email/register
+- /api/auth/email/login
+
+  Mobile
+- /api/auth/mobile/request-otp
+- /api/auth/mobile/verify-otp
 
 ScreenShort:
 1. Mobile otp request
